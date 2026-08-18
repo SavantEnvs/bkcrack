@@ -1,0 +1,9 @@
+project: savantenvs/bkcrack
+target: fuzz_zip_decrypt
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_zip_decrypt/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_zip_decrypt
+    libfuzzer: true
+    dictionary: /mayhem/fuzz_zip_decrypt.dict

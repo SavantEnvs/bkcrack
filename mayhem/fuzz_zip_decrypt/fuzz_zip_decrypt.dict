@@ -1,0 +1,9 @@
+# ZIP structural signatures (little-endian 32-bit magic numbers), one per libFuzzer dictionary
+# token, as tokens Zip.cpp's checkSignature()/Signature enum actually look for. Single-line tokens
+# only (a literal newline inside a token would split the .dict and abort libFuzzer's parser).
+"PK\x03\x04"
+"PK\x07\x08"
+"PK\x01\x02"
+"PK\x06\x06"
+"PK\x06\x07"
+"PK\x05\x06"

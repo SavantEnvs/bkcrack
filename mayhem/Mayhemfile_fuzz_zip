@@ -1,0 +1,9 @@
+project: savantenvs/bkcrack
+target: fuzz_zip
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_zip/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_zip
+    libfuzzer: true
+    dictionary: /mayhem/fuzz_zip.dict
